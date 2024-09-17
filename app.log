@@ -1,0 +1,10 @@
+2024-09-15 07:00:34,963 - __main__ - INFO - Logging initialized
+2024-09-15 07:00:37,589 - __main__ - INFO - Starting add_llm_edges with user_persona: Homebody
+2024-09-15 07:00:37,589 - __main__ - INFO - Processing batch 1
+2024-09-15 07:00:37,589 - __main__ - INFO - Processing edge: Sleep -> Relax
+2024-09-15 07:00:37,589 - __main__ - INFO - Starting get_llm_probability with params: Homebody, Sleep, Relax, morning
+2024-09-15 07:00:37,589 - __main__ - INFO - Prompt created, truncating...
+2024-09-15 07:00:37,589 - __main__ - INFO - Truncated prompt: User Persona: Homebody Current Activity: Sleep Potential Next Activity: Relax Time of Day: morning Based on the above information, what is the probability (from 0.000 to 1.000) that the user will transition from the current activity to the potential next activity? Respond with only a number between 0.000 and 1.000.
+2024-09-15 07:00:37,589 - __main__ - INFO - Preparing to call nlp model...
+2024-09-15 07:00:37,589 - __main__ - INFO - Calling nlp model...
+2024-09-15 07:01:39,172 - __main__ - INFO - Logging initialized

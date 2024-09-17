@@ -1,0 +1,17 @@
+{
+  "nodes": [
+    {"id": "1", "name": "Energy Consumption"},
+    {"id": "2", "name": "Efficiency Rating"},
+    {"id": "3", "name": "Appliance Type"},
+    {"id": "4", "name": "Energy Calculation Formula"},
+    {"id": "5", "name": "Carbon Footprint"},
+    {"id": "6", "name": "Appliance Malfunction"},
+    {"id": "7", "name": "Troubleshooting Guide"}
+  ],
+  "edges": [
+    {"source": "3", "target": "1"},
+    {"source": "2", "target": "1"},
+    {"source": "1", "target": "5"},
+    {"source": "6", "target": "7"}
+  ]
+}

@@ -1,0 +1,71 @@
+Context Description,Context Variable_Name,Weights
+Hard day at college,hard_college_day,0.8
+Deadline tomorrow,deadline_tomorrow,0.7
+Fight with girlfriend,girlfriend_fight,0.5
+Family problem,family_problem,0.3
+Easy day,easy_day,0.6
+Relaxing day,relaxing_day,0.9
+Road trip tomorrow,road_trip_tomorrow,0.4
+Party tomorrow,party_tomorrow,0.5
+Party at home this evening,home_party_tonight,0.9
+Party at friend's place this evening,friend_party_tonight,0.2
+Highly stressed,high_stress,0.7
+Job stress,job_stress,0.5
+Academic stress,academic_stress,0.6
+Exam week,exam_week,0.7
+Project due soon,project_due_soon,0.8
+Financial stress,financial_stress,0.4
+Roommate conflict,roommate_conflict,0.8
+Homesick,homesick,0.6
+First day of semester,first_day_semester,0.5
+Last day of semester,last_day_semester,0.7
+Job interview tomorrow,job_interview_tomorrow,0.6
+Internship application deadline,internship_deadline,0.7
+Sports team tryouts,sports_tryouts,0.3
+Club event organizing,club_event_organizing,0.5
+Part-time job shift,part_time_job_shift,0.4
+Volunteering day,volunteering_day,0.2
+Health issue,health_issue,0.8
+Relationship anniversary,relationship_anniversary,0.7
+Birthday,birthday,0.8
+Holiday season,holiday_season,0.9
+Summer break starting,summer_break_start,0.7
+Winter break ending,winter_break_end,0.6
+New hobby enthusiasm,new_hobby,0.7
+Lost item stress,lost_item_stress,0.5
+Oversleeping panic,oversleeping_panic,0.6
+Unexpected visitor,unexpected_visitor,0.8
+Power outage,power_outage,0.9
+Internet down,internet_down,0.8
+Exciting date planned,exciting_date,0.7
+Broke up recently,recent_breakup,0.6
+Made new friends,new_friends,0.5
+Homesick,homesick,0.7
+Pulled all-nighter,all_nighter,0.8
+Hangover day,hangover_day,0.9
+Procrastination guilt,procrastination_guilt,0.6
+Achieved good grade,good_grade_achievement,0.7
+Failed an exam,failed_exam,0.6
+Campus event day,campus_event_day,0.3
+Moving to new apartment,moving_day,0.9
+First time living alone,first_time_alone,0.8
+Dealing with noisy neighbors,noisy_neighbors,0.7
+Forgot important assignment,forgot_assignment,0.5
+Laptop/phone broken,tech_breakdown,0.7
+Exploring new city,exploring_new_city,0.2
+Joining new club/society,joining_new_club,0.3
+Preparing for study abroad,study_abroad_prep,0.6
+Returning from vacation,post_vacation_return,0.7
+Feeling under the weather,feeling_sick,0.9
+Unexpected free day,unexpected_free_day,0.8
+Waiting for important email,awaiting_important_email,0.5
+Budgeting for the month,monthly_budgeting,0.6
+Caught up in a TV series binge,tv_series_binge,0.9
+Preparing for a presentation,presentation_prep,0.7
+Dealing with a breakup,post_breakup_coping,0.6
+Job offer consideration,job_offer_decision,0.5
+Contemplating changing major,major_change_contemplation,0.4
+Dealing with academic probation,academic_probation,0.5
+Planning summer internship,summer_internship_planning,0.6
+Struggling with a difficult class,difficult_class_struggle,0.7
+Preparing for graduate school applications,grad_school_prep,0.7

@@ -1,0 +1,526 @@
+// Home Activity and Appliance Settings Graph
+digraph {
+	rankdir=LR size="8,5"
+	"TV: Off" [label="TV: Off" fillcolor=skyblue style=filled]
+	"TV: On (Low Volume)" [label="TV: On (Low Volume)" fillcolor=skyblue style=filled]
+	"TV: On (Normal Volume)" [label="TV: On (Normal Volume)" fillcolor=skyblue style=filled]
+	"TV: On (High Volume)" [label="TV: On (High Volume)" fillcolor=skyblue style=filled]
+	"TV: Mute" [label="TV: Mute" fillcolor=skyblue style=filled]
+	"TV: Low Brightness" [label="TV: Low Brightness" fillcolor=skyblue style=filled]
+	"TV: High Brightness" [label="TV: High Brightness" fillcolor=skyblue style=filled]
+	"AC: Off" [label="AC: Off" fillcolor=lightgreen style=filled]
+	"AC: 68°F" [label="AC: 68°F" fillcolor=lightgreen style=filled]
+	"AC: 72°F" [label="AC: 72°F" fillcolor=lightgreen style=filled]
+	"AC: 76°F" [label="AC: 76°F" fillcolor=lightgreen style=filled]
+	"Lights: Off" [label="Lights: Off" fillcolor=yellow style=filled]
+	"Lights: Dim" [label="Lights: Dim" fillcolor=yellow style=filled]
+	"Lights: Bright" [label="Lights: Bright" fillcolor=yellow style=filled]
+	"Fridge: Closed" [label="Fridge: Closed" fillcolor=pink style=filled]
+	"Fridge: Open" [label="Fridge: Open" fillcolor=pink style=filled]
+	"Home: Empty" [label="Home: Empty" fillcolor=orange style=filled]
+	"Home: Alone" [label="Home: Alone" fillcolor=orange style=filled]
+	"Home: Party" [label="Home: Party" fillcolor=orange style=filled]
+	"Home: Game Night" [label="Home: Game Night" fillcolor=orange style=filled]
+	"Home: Date Night" [label="Home: Date Night" fillcolor=orange style=filled]
+	"Home: Family Time" [label="Home: Family Time" fillcolor=orange style=filled]
+	Sleep [label=Sleep fillcolor=lightgray style=filled]
+	Relax [label=Relax fillcolor=lightgray style=filled]
+	"Clean Home" [label="Clean Home" fillcolor=lightgray style=filled]
+	"Watch TV" [label="Watch TV" fillcolor=lightgray style=filled]
+	"Work From Home" [label="Work From Home" fillcolor=lightgray style=filled]
+	"Chat with Friends in person" [label="Chat with Friends in person" fillcolor=lightgray style=filled]
+	"Chat with Friends on Phone" [label="Chat with Friends on Phone" fillcolor=lightgray style=filled]
+	"Play Games on computer" [label="Play Games on computer" fillcolor=lightgray style=filled]
+	Dance [label=Dance fillcolor=lightgray style=filled]
+	"Board Games" [label="Board Games" fillcolor=lightgray style=filled]
+	Pray [label=Pray fillcolor=lightgray style=filled]
+	"Sit quietly" [label="Sit quietly" fillcolor=lightgray style=filled]
+	"Read Book" [label="Read Book" fillcolor=lightgray style=filled]
+	Study [label=Study fillcolor=lightgray style=filled]
+	"Meet a Deadline" [label="Meet a Deadline" fillcolor=lightgray style=filled]
+	Meditate [label=Meditate fillcolor=lightgray style=filled]
+	"Listen to music" [label="Listen to music" fillcolor=lightgray style=filled]
+	Romance [label=Romance fillcolor=lightgray style=filled]
+	TV:" Off" -> TV:" On (Normal Volume)"
+	TV:" Off" -> AC:" 72°F"
+	TV:" Off" -> AC:" 76°F"
+	TV:" Off" -> Lights:" Off"
+	TV:" Off" -> Lights:" Bright"
+	TV:" Off" -> Fridge:" Open"
+	TV:" Off" -> Home:" Game Night"
+	TV:" Off" -> Home:" Date Night"
+	TV:" Off" -> Home:" Family Time"
+	TV:" Off" -> Sleep [label=0.78]
+	TV:" Off" -> Pray
+	TV:" Off" -> "Sit quietly"
+	TV:" Off" -> "Meet a Deadline" [label=0.73]
+	TV:" Off" -> Meditate
+	TV:" On (Low Volume)" -> TV:" Mute"
+	TV:" On (Low Volume)" -> TV:" High Brightness" [label=0.73]
+	TV:" On (Low Volume)" -> AC:" Off"
+	TV:" On (Low Volume)" -> AC:" 76°F" [label=0.85]
+	TV:" On (Low Volume)" -> Fridge:" Closed"
+	TV:" On (Low Volume)" -> Home:" Empty"
+	TV:" On (Low Volume)" -> Home:" Alone"
+	TV:" On (Low Volume)" -> Sleep [label=0.87]
+	TV:" On (Low Volume)" -> Relax
+	TV:" On (Low Volume)" -> "Clean Home" [label=0.80]
+	TV:" On (Low Volume)" -> "Sit quietly"
+	TV:" On (Low Volume)" -> Study
+	TV:" On (Low Volume)" -> "Meet a Deadline"
+	TV:" On (Low Volume)" -> Romance
+	TV:" On (Normal Volume)" -> TV:" Low Brightness"
+	TV:" On (Normal Volume)" -> Lights:" Dim" [label=0.76]
+	TV:" On (Normal Volume)" -> Home:" Alone" [label=0.84]
+	TV:" On (Normal Volume)" -> Home:" Date Night"
+	TV:" On (Normal Volume)" -> Sleep [label=0.88]
+	TV:" On (Normal Volume)" -> Relax
+	TV:" On (Normal Volume)" -> "Chat with Friends on Phone"
+	TV:" On (Normal Volume)" -> Study
+	TV:" On (Normal Volume)" -> Meditate [label=0.81]
+	TV:" On (High Volume)" -> TV:" Mute"
+	TV:" On (High Volume)" -> TV:" Low Brightness"
+	TV:" On (High Volume)" -> AC:" Off" [label=0.87]
+	TV:" On (High Volume)" -> Fridge:" Open"
+	TV:" On (High Volume)" -> Home:" Game Night" [label=0.87]
+	TV:" On (High Volume)" -> Home:" Date Night"
+	TV:" On (High Volume)" -> Sleep
+	TV:" On (High Volume)" -> "Chat with Friends in person"
+	TV:" On (High Volume)" -> "Chat with Friends on Phone" [label=0.71]
+	TV:" On (High Volume)" -> "Play Games on computer"
+	TV:" On (High Volume)" -> "Board Games"
+	TV:" Mute" -> TV:" Low Brightness" [label=0.84]
+	TV:" Mute" -> TV:" High Brightness"
+	TV:" Mute" -> AC:" 72°F"
+	TV:" Mute" -> AC:" 76°F"
+	TV:" Mute" -> Lights:" Dim"
+	TV:" Mute" -> Fridge:" Open" [label=0.88]
+	TV:" Mute" -> Home:" Alone"
+	TV:" Mute" -> Home:" Game Night"
+	TV:" Mute" -> "Watch TV" [label=0.74]
+	TV:" Mute" -> "Play Games on computer"
+	TV:" Mute" -> Pray [label=0.76]
+	TV:" Mute" -> "Meet a Deadline"
+	TV:" Low Brightness" -> TV:" On (Low Volume)"
+	TV:" Low Brightness" -> TV:" On (High Volume)"
+	TV:" Low Brightness" -> TV:" High Brightness"
+	TV:" Low Brightness" -> AC:" 68°F"
+	TV:" Low Brightness" -> AC:" 76°F" [label=0.74]
+	TV:" Low Brightness" -> Lights:" Off"
+	TV:" Low Brightness" -> Lights:" Dim"
+	TV:" Low Brightness" -> Fridge:" Closed"
+	TV:" Low Brightness" -> Home:" Alone"
+	TV:" Low Brightness" -> Home:" Game Night"
+	TV:" Low Brightness" -> Home:" Date Night"
+	TV:" Low Brightness" -> Home:" Family Time" [label=0.80]
+	TV:" Low Brightness" -> "Work From Home"
+	TV:" Low Brightness" -> "Play Games on computer"
+	TV:" Low Brightness" -> "Listen to music"
+	TV:" High Brightness" -> Lights:" Off" [label=0.80]
+	TV:" High Brightness" -> Home:" Party"
+	TV:" High Brightness" -> Home:" Game Night"
+	TV:" High Brightness" -> Home:" Date Night"
+	TV:" High Brightness" -> Home:" Family Time"
+	TV:" High Brightness" -> "Work From Home"
+	TV:" High Brightness" -> "Play Games on computer"
+	TV:" High Brightness" -> "Meet a Deadline" [label=0.76]
+	AC:" Off" -> TV:" Mute" [label=0.78]
+	AC:" Off" -> Fridge:" Closed" [label=0.76]
+	AC:" Off" -> "Clean Home"
+	AC:" Off" -> Pray
+	AC:" Off" -> "Sit quietly"
+	AC:" Off" -> Romance [label=0.86]
+	AC:" 68°F" -> TV:" Off"
+	AC:" 68°F" -> TV:" Mute" [label=0.86]
+	AC:" 68°F" -> TV:" High Brightness"
+	AC:" 68°F" -> Lights:" Off"
+	AC:" 68°F" -> Lights:" Bright"
+	AC:" 68°F" -> Fridge:" Closed" [label=0.81]
+	AC:" 68°F" -> Home:" Alone"
+	AC:" 68°F" -> Sleep
+	AC:" 68°F" -> "Clean Home"
+	AC:" 68°F" -> "Play Games on computer"
+	AC:" 68°F" -> "Sit quietly"
+	AC:" 68°F" -> "Meet a Deadline"
+	AC:" 72°F" -> TV:" On (Low Volume)"
+	AC:" 72°F" -> TV:" Low Brightness"
+	AC:" 72°F" -> AC:" 76°F"
+	AC:" 72°F" -> Lights:" Bright"
+	AC:" 72°F" -> Home:" Empty"
+	AC:" 72°F" -> Home:" Date Night"
+	AC:" 72°F" -> Home:" Family Time" [label=0.86]
+	AC:" 72°F" -> Sleep
+	AC:" 72°F" -> "Clean Home"
+	AC:" 72°F" -> "Chat with Friends on Phone"
+	AC:" 72°F" -> "Play Games on computer"
+	AC:" 76°F" -> TV:" Mute"
+	AC:" 76°F" -> TV:" Low Brightness"
+	AC:" 76°F" -> AC:" Off"
+	AC:" 76°F" -> AC:" 72°F"
+	AC:" 76°F" -> Lights:" Off"
+	AC:" 76°F" -> Lights:" Bright"
+	AC:" 76°F" -> Fridge:" Closed"
+	AC:" 76°F" -> Home:" Empty" [label=0.84]
+	AC:" 76°F" -> Home:" Alone"
+	AC:" 76°F" -> Home:" Family Time"
+	AC:" 76°F" -> "Play Games on computer"
+	AC:" 76°F" -> "Sit quietly"
+	AC:" 76°F" -> "Read Book"
+	Lights:" Off" -> TV:" On (Normal Volume)"
+	Lights:" Off" -> TV:" On (High Volume)"
+	Lights:" Off" -> AC:" Off"
+	Lights:" Off" -> Lights:" Dim"
+	Lights:" Off" -> Home:" Empty"
+	Lights:" Off" -> Home:" Family Time"
+	Lights:" Off" -> "Clean Home" [label=0.80]
+	Lights:" Off" -> "Work From Home" [label=0.89]
+	Lights:" Off" -> "Board Games"
+	Lights:" Off" -> Pray
+	Lights:" Off" -> "Read Book"
+	Lights:" Off" -> Study
+	Lights:" Off" -> "Meet a Deadline"
+	Lights:" Dim" -> TV:" Off"
+	Lights:" Dim" -> TV:" Mute" [label=0.81]
+	Lights:" Dim" -> AC:" 68°F" [label=0.74]
+	Lights:" Dim" -> AC:" 72°F" [label=0.75]
+	Lights:" Dim" -> Fridge:" Open"
+	Lights:" Dim" -> Home:" Empty"
+	Lights:" Dim" -> Sleep
+	Lights:" Dim" -> Relax
+	Lights:" Dim" -> "Watch TV"
+	Lights:" Dim" -> "Board Games" [label=0.79]
+	Lights:" Dim" -> "Read Book"
+	Lights:" Dim" -> "Listen to music"
+	Lights:" Bright" -> TV:" High Brightness" [label=0.80]
+	Lights:" Bright" -> AC:" 72°F"
+	Lights:" Bright" -> AC:" 76°F"
+	Lights:" Bright" -> Fridge:" Open"
+	Lights:" Bright" -> Home:" Game Night"
+	Lights:" Bright" -> Home:" Date Night" [label=0.87]
+	Lights:" Bright" -> "Watch TV" [label=0.74]
+	Lights:" Bright" -> "Chat with Friends in person" [label=0.78]
+	Lights:" Bright" -> "Sit quietly" [label=0.81]
+	Lights:" Bright" -> "Read Book"
+	Lights:" Bright" -> Study [label=0.83]
+	Lights:" Bright" -> Meditate
+	Fridge:" Closed" -> TV:" On (Normal Volume)" [label=0.73]
+	Fridge:" Closed" -> Lights:" Dim"
+	Fridge:" Closed" -> Lights:" Bright"
+	Fridge:" Closed" -> Home:" Game Night" [label=0.85]
+	Fridge:" Closed" -> Home:" Family Time"
+	Fridge:" Closed" -> Sleep [label=0.89]
+	Fridge:" Closed" -> "Watch TV"
+	Fridge:" Closed" -> "Board Games"
+	Fridge:" Closed" -> "Listen to music"
+	Fridge:" Open" -> TV:" High Brightness"
+	Fridge:" Open" -> AC:" Off"
+	Fridge:" Open" -> AC:" 72°F"
+	Fridge:" Open" -> AC:" 76°F"
+	Fridge:" Open" -> Lights:" Bright" [label=0.71]
+	Fridge:" Open" -> Home:" Empty" [label=0.71]
+	Fridge:" Open" -> Home:" Game Night" [label=0.74]
+	Fridge:" Open" -> Home:" Family Time"
+	Fridge:" Open" -> Relax
+	Fridge:" Open" -> "Clean Home"
+	Fridge:" Open" -> Meditate
+	Fridge:" Open" -> Romance
+	Home:" Empty" -> TV:" Off"
+	Home:" Empty" -> TV:" On (Normal Volume)"
+	Home:" Empty" -> TV:" Low Brightness"
+	Home:" Empty" -> TV:" High Brightness" [label=0.75]
+	Home:" Empty" -> AC:" Off" [label=0.82]
+	Home:" Empty" -> AC:" 76°F"
+	Home:" Empty" -> Lights:" Off"
+	Home:" Empty" -> Lights:" Bright"
+	Home:" Empty" -> Home:" Game Night"
+	Home:" Empty" -> Sleep
+	Home:" Empty" -> "Play Games on computer" [label=0.85]
+	Home:" Empty" -> Pray
+	Home:" Alone" -> TV:" On (Normal Volume)"
+	Home:" Alone" -> TV:" On (High Volume)"
+	Home:" Alone" -> TV:" High Brightness" [label=0.75]
+	Home:" Alone" -> AC:" 72°F"
+	Home:" Alone" -> AC:" 76°F"
+	Home:" Alone" -> Home:" Family Time"
+	Home:" Alone" -> Sleep
+	Home:" Alone" -> "Work From Home" [label=0.80]
+	Home:" Alone" -> Pray
+	Home:" Alone" -> "Meet a Deadline"
+	Home:" Party" -> TV:" Off"
+	Home:" Party" -> TV:" On (Low Volume)"
+	Home:" Party" -> TV:" On (High Volume)" [label=0.80]
+	Home:" Party" -> TV:" High Brightness" [label=0.77]
+	Home:" Party" -> Home:" Empty" [label=0.71]
+	Home:" Party" -> Home:" Alone" [label=0.74]
+	Home:" Party" -> "Watch TV"
+	Home:" Party" -> "Work From Home"
+	Home:" Party" -> "Chat with Friends in person"
+	Home:" Party" -> "Chat with Friends on Phone" [label=0.86]
+	Home:" Party" -> Dance
+	Home:" Party" -> "Board Games"
+	Home:" Party" -> Meditate
+	Home:" Party" -> Lights:" Bright" [label=0.90]
+	Home:" Game Night" -> TV:" Off"
+	Home:" Game Night" -> AC:" Off"
+	Home:" Game Night" -> AC:" 76°F"
+	Home:" Game Night" -> Lights:" Bright"
+	Home:" Game Night" -> Fridge:" Closed"
+	Home:" Game Night" -> Fridge:" Open" [label=0.90]
+	Home:" Game Night" -> Home:" Empty" [label=0.87]
+	Home:" Game Night" -> Home:" Party"
+	Home:" Game Night" -> Home:" Date Night" [label=0.82]
+	Home:" Game Night" -> Home:" Family Time"
+	Home:" Game Night" -> Sleep [label=0.79]
+	Home:" Game Night" -> "Chat with Friends on Phone"
+	Home:" Game Night" -> "Play Games on computer" [label=0.87]
+	Home:" Game Night" -> "Read Book"
+	Home:" Game Night" -> Study
+	Home:" Game Night" -> "Meet a Deadline"
+	Home:" Game Night" -> "Listen to music"
+	Home:" Game Night" -> Romance
+	Home:" Date Night" -> TV:" On (Low Volume)"
+	Home:" Date Night" -> TV:" On (Normal Volume)"
+	Home:" Date Night" -> TV:" On (High Volume)" [label=0.75]
+	Home:" Date Night" -> TV:" Mute"
+	Home:" Date Night" -> TV:" Low Brightness"
+	Home:" Date Night" -> TV:" High Brightness"
+	Home:" Date Night" -> Lights:" Off"
+	Home:" Date Night" -> Home:" Party"
+	Home:" Date Night" -> "Chat with Friends in person"
+	Home:" Date Night" -> Dance
+	Home:" Date Night" -> "Board Games"
+	Home:" Date Night" -> "Sit quietly"
+	Home:" Date Night" -> Study [label=0.73]
+	Home:" Date Night" -> Romance [label=0.85]
+	Home:" Date Night" -> Lights:" Dim" [label=0.90]
+	Home:" Family Time" -> TV:" On (Low Volume)" [label=0.81]
+	Home:" Family Time" -> TV:" On (Normal Volume)" [label=0.79]
+	Home:" Family Time" -> TV:" On (High Volume)"
+	Home:" Family Time" -> Lights:" Off"
+	Home:" Family Time" -> Lights:" Dim" [label=0.85]
+	Home:" Family Time" -> Home:" Party"
+	Home:" Family Time" -> Sleep
+	Home:" Family Time" -> Relax
+	Home:" Family Time" -> Meditate [label=0.79]
+	Sleep -> TV:" On (High Volume)"
+	Sleep -> TV:" Mute"
+	Sleep -> AC:" 72°F"
+	Sleep -> AC:" 76°F" [label=0.74]
+	Sleep -> Home:" Empty" [label=0.80]
+	Sleep -> Home:" Alone"
+	Sleep -> Home:" Game Night"
+	Sleep -> "Clean Home"
+	Sleep -> "Chat with Friends on Phone"
+	Sleep -> "Read Book"
+	Sleep -> Study
+	Sleep -> "Meet a Deadline"
+	Sleep -> Meditate [label=0.77]
+	Sleep -> Lights:" Off" [label=0.95]
+	Sleep -> TV:" Off" [label=0.90]
+	Relax -> TV:" Mute"
+	Relax -> AC:" Off"
+	Relax -> AC:" 72°F" [label=0.72]
+	Relax -> Lights:" Off" [label=0.81]
+	Relax -> Fridge:" Closed"
+	Relax -> Home:" Empty"
+	Relax -> Home:" Party"
+	Relax -> Home:" Date Night"
+	Relax -> "Board Games"
+	Relax -> "Sit quietly"
+	"Clean Home" -> TV:" Mute" [label=0.88]
+	"Clean Home" -> AC:" Off"
+	"Clean Home" -> Lights:" Dim" [label=0.86]
+	"Clean Home" -> Home:" Alone"
+	"Clean Home" -> Pray
+	"Clean Home" -> "Listen to music"
+	"Clean Home" -> Romance
+	"Watch TV" -> TV:" On (Normal Volume)" [label=0.90]
+	"Watch TV" -> TV:" Low Brightness"
+	"Watch TV" -> TV:" High Brightness"
+	"Watch TV" -> AC:" 76°F"
+	"Watch TV" -> Home:" Alone" [label=0.74]
+	"Watch TV" -> Home:" Family Time" [label=0.89]
+	"Watch TV" -> "Clean Home"
+	"Watch TV" -> "Work From Home"
+	"Watch TV" -> "Chat with Friends in person"
+	"Watch TV" -> Pray
+	"Watch TV" -> "Sit quietly"
+	"Watch TV" -> "Meet a Deadline"
+	"Work From Home" -> TV:" On (Low Volume)"
+	"Work From Home" -> TV:" On (Normal Volume)"
+	"Work From Home" -> TV:" Mute"
+	"Work From Home" -> Lights:" Off"
+	"Work From Home" -> Fridge:" Closed"
+	"Work From Home" -> Fridge:" Open"
+	"Work From Home" -> Sleep
+	"Work From Home" -> "Chat with Friends on Phone" [label=0.73]
+	"Work From Home" -> "Play Games on computer"
+	"Work From Home" -> Pray
+	"Work From Home" -> Study [label=0.88]
+	"Work From Home" -> "Meet a Deadline" [label=0.89]
+	"Work From Home" -> Lights:" Bright" [label=0.80]
+	"Work From Home" -> AC:" 72°F"
+	"Chat with Friends in person" -> TV:" On (High Volume)"
+	"Chat with Friends in person" -> TV:" Low Brightness"
+	"Chat with Friends in person" -> AC:" Off"
+	"Chat with Friends in person" -> AC:" 68°F"
+	"Chat with Friends in person" -> Lights:" Off"
+	"Chat with Friends in person" -> Fridge:" Closed"
+	"Chat with Friends in person" -> Home:" Alone"
+	"Chat with Friends in person" -> Home:" Party"
+	"Chat with Friends in person" -> Home:" Date Night"
+	"Chat with Friends in person" -> Relax
+	"Chat with Friends in person" -> "Work From Home" [label=0.81]
+	"Chat with Friends in person" -> "Board Games"
+	"Chat with Friends in person" -> "Sit quietly" [label=0.85]
+	"Chat with Friends on Phone" -> Lights:" Dim"
+	"Chat with Friends on Phone" -> Home:" Date Night" [label=0.82]
+	"Chat with Friends on Phone" -> Sleep
+	"Chat with Friends on Phone" -> Dance
+	"Chat with Friends on Phone" -> Pray
+	"Chat with Friends on Phone" -> "Read Book"
+	"Chat with Friends on Phone" -> Study [label=0.85]
+	"Play Games on computer" -> TV:" On (Normal Volume)"
+	"Play Games on computer" -> AC:" 68°F"
+	"Play Games on computer" -> Lights:" Dim" [label=0.72]
+	"Play Games on computer" -> Fridge:" Open"
+	"Play Games on computer" -> Home:" Empty"
+	"Play Games on computer" -> Home:" Date Night"
+	"Play Games on computer" -> Home:" Family Time"
+	"Play Games on computer" -> "Clean Home"
+	"Play Games on computer" -> "Work From Home"
+	"Play Games on computer" -> "Sit quietly" [label=0.82]
+	"Play Games on computer" -> Romance
+	Dance -> TV:" Off"
+	Dance -> TV:" Low Brightness" [label=0.87]
+	Dance -> AC:" 72°F"
+	Dance -> Lights:" Dim"
+	Dance -> Lights:" Bright"
+	Dance -> Home:" Party"
+	Dance -> Home:" Game Night" [label=0.82]
+	Dance -> Home:" Family Time"
+	Dance -> Sleep [label=0.71]
+	Dance -> "Watch TV"
+	Dance -> "Work From Home"
+	Dance -> "Read Book"
+	Dance -> Study
+	Dance -> TV:" On (High Volume)" [label=0.80]
+	"Board Games" -> TV:" Off"
+	"Board Games" -> TV:" On (Low Volume)" [label=0.81]
+	"Board Games" -> TV:" On (Normal Volume)"
+	"Board Games" -> TV:" On (High Volume)"
+	"Board Games" -> TV:" Low Brightness"
+	"Board Games" -> AC:" 68°F"
+	"Board Games" -> Lights:" Off" [label=0.75]
+	"Board Games" -> Fridge:" Open" [label=0.84]
+	"Board Games" -> Home:" Party"
+	"Board Games" -> Home:" Game Night"
+	"Board Games" -> Home:" Family Time"
+	"Board Games" -> "Clean Home"
+	"Board Games" -> "Work From Home" [label=0.78]
+	"Board Games" -> Dance
+	"Board Games" -> "Sit quietly"
+	"Board Games" -> "Read Book"
+	"Board Games" -> Study [label=0.79]
+	"Board Games" -> "Meet a Deadline"
+	"Board Games" -> Romance
+	Pray -> TV:" On (Low Volume)"
+	Pray -> TV:" On (Normal Volume)"
+	Pray -> TV:" Mute"
+	Pray -> TV:" High Brightness" [label=0.80]
+	Pray -> AC:" Off"
+	Pray -> AC:" 76°F"
+	Pray -> Lights:" Dim"
+	Pray -> Fridge:" Open" [label=0.79]
+	Pray -> "Clean Home" [label=0.75]
+	Pray -> "Watch TV"
+	Pray -> "Work From Home"
+	Pray -> "Chat with Friends in person"
+	Pray -> "Read Book"
+	Pray -> Study [label=0.84]
+	Pray -> "Meet a Deadline" [label=0.90]
+	"Sit quietly" -> TV:" On (High Volume)"
+	"Sit quietly" -> TV:" High Brightness" [label=0.75]
+	"Sit quietly" -> AC:" 72°F"
+	"Sit quietly" -> Home:" Empty"
+	"Sit quietly" -> Home:" Game Night"
+	"Sit quietly" -> Home:" Date Night"
+	"Sit quietly" -> Home:" Family Time"
+	"Sit quietly" -> "Watch TV"
+	"Sit quietly" -> "Chat with Friends in person"
+	"Sit quietly" -> "Play Games on computer" [label=0.71]
+	"Sit quietly" -> "Board Games" [label=0.89]
+	"Sit quietly" -> "Read Book"
+	"Read Book" -> TV:" On (High Volume)"
+	"Read Book" -> AC:" 72°F" [label=0.74]
+	"Read Book" -> Fridge:" Open" [label=0.76]
+	"Read Book" -> Home:" Game Night"
+	"Read Book" -> Home:" Family Time"
+	"Read Book" -> Sleep
+	"Read Book" -> Relax
+	"Read Book" -> "Watch TV"
+	"Read Book" -> "Play Games on computer"
+	"Read Book" -> Meditate [label=0.81]
+	"Read Book" -> "Listen to music"
+	Study -> TV:" Off"
+	Study -> TV:" On (Normal Volume)" [label=0.73]
+	Study -> TV:" Mute"
+	Study -> TV:" Low Brightness"
+	Study -> AC:" Off" [label=0.78]
+	Study -> AC:" 68°F"
+	Study -> AC:" 72°F"
+	Study -> Lights:" Bright" [label=0.80]
+	Study -> Home:" Empty" [label=0.71]
+	Study -> Home:" Alone"
+	Study -> Sleep
+	Study -> Relax [label=0.86]
+	Study -> Dance [label=0.74]
+	Study -> "Board Games"
+	Study -> "Listen to music"
+	"Meet a Deadline" -> TV:" On (Low Volume)"
+	"Meet a Deadline" -> TV:" On (High Volume)" [label=0.85]
+	"Meet a Deadline" -> TV:" High Brightness"
+	"Meet a Deadline" -> AC:" 72°F" [label=0.86]
+	"Meet a Deadline" -> Lights:" Off"
+	"Meet a Deadline" -> Lights:" Dim"
+	"Meet a Deadline" -> Home:" Date Night"
+	"Meet a Deadline" -> Sleep
+	"Meet a Deadline" -> "Board Games" [label=0.89]
+	"Meet a Deadline" -> Pray [label=0.72]
+	"Meet a Deadline" -> "Listen to music"
+	Meditate -> TV:" On (Low Volume)"
+	Meditate -> TV:" Low Brightness"
+	Meditate -> AC:" 76°F"
+	Meditate -> Lights:" Off"
+	Meditate -> Lights:" Bright"
+	Meditate -> Home:" Date Night" [label=0.81]
+	Meditate -> "Clean Home"
+	Meditate -> "Work From Home"
+	Meditate -> "Chat with Friends on Phone"
+	Meditate -> "Sit quietly"
+	Meditate -> Study
+	Meditate -> Romance
+	Meditate -> Lights:" Dim"
+	Meditate -> TV:" Off" [label=0.90]
+	"Listen to music" -> TV:" On (Low Volume)"
+	"Listen to music" -> Home:" Empty"
+	"Listen to music" -> "Watch TV"
+	"Listen to music" -> "Chat with Friends on Phone"
+	"Listen to music" -> "Play Games on computer"
+	"Listen to music" -> Pray [label=0.73]
+	"Listen to music" -> Study
+	Romance -> TV:" Off"
+	Romance -> TV:" On (High Volume)" [label=0.80]
+	Romance -> TV:" Mute"
+	Romance -> TV:" Low Brightness"
+	Romance -> Lights:" Off"
+	Romance -> Lights:" Bright"
+	Romance -> Home:" Empty"
+	Romance -> Home:" Alone"
+	Romance -> Home:" Party" [label=0.85]
+	Romance -> Home:" Date Night"
+	Romance -> Sleep
+	Romance -> "Clean Home"
+	Romance -> "Play Games on computer" [label=0.71]
+	Romance -> Pray
+}

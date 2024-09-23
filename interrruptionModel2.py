@@ -335,4 +335,4 @@ def interactive_simulation():
 
 
 # Run the interactive simulation
-# interactive_simulation()
+interactive_simulation()
